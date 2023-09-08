@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {
   FromComponent,
   ObservableComponent,
+  OfComponent,
   SubjectComponent,
 } from './components';
 
@@ -12,9 +13,10 @@ import {
     <h1>{{ title }}</h1>
     <!-- <app-observable /> -->
     <!-- <app-subject /> -->
-    <app-from />
+    <!-- <app-from /> -->
+    <app-of />
   `,
-  imports: [ObservableComponent, SubjectComponent, FromComponent],
+  imports: [ObservableComponent, SubjectComponent, FromComponent, OfComponent],
 })
 export class AppComponent {
   title = 'rxjs-operators';

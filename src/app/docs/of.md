@@ -1,0 +1,3 @@
+O operador of é uma função do RxJS que cria um Observable a partir de um ou mais valores fornecidos como argumentos. Esses valores são emitidos pelo Observable na mesma ordem em que foram passados. Em outras palavras, o of é usado para criar um Observable que emite os valores especificados e, em seguida, conclui a emissão.
+
+O operador of é útil quando você precisa criar um Observable com valores estáticos ou constantes que não provêm de fontes assíncronas, como chamadas de API. Ele é especialmente útil para criar Observables para testes unitários, quando você deseja simular dados de entrada para seu código observável.
