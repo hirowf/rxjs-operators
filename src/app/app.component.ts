@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
-import { ObservableComponent, SubjectComponent } from './components';
+import {
+  FromComponent,
+  ObservableComponent,
+  SubjectComponent,
+} from './components';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +11,10 @@ import { ObservableComponent, SubjectComponent } from './components';
   template: `
     <h1>{{ title }}</h1>
     <!-- <app-observable /> -->
-    <app-subject />
+    <!-- <app-subject /> -->
+    <app-from />
   `,
-  imports: [ObservableComponent, SubjectComponent],
+  imports: [ObservableComponent, SubjectComponent, FromComponent],
 })
 export class AppComponent {
   title = 'rxjs-operators';
