@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, interval } from 'rxjs';
 
 @Component({
   selector: 'app-observable',
@@ -21,14 +21,22 @@ export class ObservableComponent implements OnInit {
       subscriber.next(10);
       subscriber.next('string');
       subscriber.next(true);
-      subscriber.next({ name: 'João' });
+      subscriber.next({ name: 'Gojo' });
       subscriber.complete();
     });
+    const it = interval(1000);
 
-    observable.subscribe({
+    const subscription = observable.subscribe({
       next: (value) => console.log('observer next value', value),
       error: (error) => console.error('observer error', error),
       complete: () => console.log('observer complete'),
     });
+
+    setTimeout(() => {
+      subscription2.unsubscribe();
+    }, 4000);
+
+    subscription.unsubscribe();
+    const subscription2 = it.subscribe(console.log);
   }
 }
